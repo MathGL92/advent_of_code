@@ -1,3 +1,5 @@
+input = File.open("/Users/mathieulonge/code/MathGL92/advent_of_code/day_4/input.txt").read
+
 def passport_processing(string)
   passports_array = string.split("\n\n").map { |passport| passport.gsub("\n", ' ') }.map { |passport| passport.split(' ') }.map do |passport|
       passport.map { |field| field.split(':') }.to_h
